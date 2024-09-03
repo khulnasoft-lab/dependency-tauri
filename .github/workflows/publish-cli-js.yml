@@ -215,7 +215,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --ignore-scripts --frozen-lockfile --registry https://registry.npmjs.org --network-timeout 300000
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: bindings-${{ matrix.settings.target }}
           path: 'tooling/cli/node/'
@@ -248,7 +248,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --ignore-scripts --frozen-lockfile --registry https://registry.npmjs.org --network-timeout 300000
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: bindings-x86_64-unknown-linux-gnu
           path: 'tooling/cli/node/'
@@ -287,7 +287,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --ignore-scripts --frozen-lockfile --registry https://registry.npmjs.org --network-timeout 300000
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: bindings-x86_64-unknown-linux-musl
           path: 'tooling/cli/node/'
@@ -329,12 +329,12 @@ jobs:
       - name: Install dependencies
         run: yarn install --ignore-scripts --ignore-platform --frozen-lockfile --registry https://registry.npmjs.org --network-timeout 300000
       - name: Download aarch64-gnu artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: bindings-aarch64-unknown-linux-gnu
           path: 'tooling/cli/node/'
       - name: Download armv7-gnueabihf artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           name: bindings-armv7-unknown-linux-gnueabihf
           path: 'tooling/cli/node/'
@@ -379,7 +379,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --ignore-scripts --frozen-lockfile --registry https://registry.npmjs.org --network-timeout 300000
       - name: Download all artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.1.7
         with:
           path: tooling/cli/node/artifacts
       - name: Move artifacts
